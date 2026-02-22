@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1a1a40);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Animated background */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating glow effect */
+body::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(138,43,226,0.4), transparent 60%);
+  top: -200px;
+  left: -200px;
+  filter: blur(120px);
+  animation: floatGlow 8s infinite alternate ease-in-out;
+}
+
+@keyframes floatGlow {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(150px,100px); }
+}
+
+/* Main Card */
+.container {
+  width: 420px;
+  padding: 3rem;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 60px rgba(138, 43, 226, 0.4);
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 90px rgba(255, 0, 255, 0.6);
+}
+
+/* Title */
+.container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Form Layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Input */
+form input {
+  height: 55px;
+  padding: 0 1.2rem;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transition: 0.3s;
+}
+
+form input:focus {
+  box-shadow: 0 0 15px #8a2be2;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Dropdown Layout */
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* From & To */
+.from,
+.to {
+  flex: 1;
+}
+
+/* Select Container */
+.select-container {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: 0.3s ease;
+}
+
+.select-container:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+/* Flag */
+.select-container img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+/* Select */
+.select-container select {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  appearance: none;
+}
+
+/* FIX dropdown text color */
+.select-container select option {
+  background: #1a1a40;
+  color: #fff;
+}
+
+/* Swap Icon */
+.dropdown i {
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+  color: #8a2be2;
+}
+
+.dropdown i:hover {
+  transform: rotate(180deg) scale(1.2);
+  color: #ff00ff;
+}
+
+/* Rate Text */
+.msg {
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  letter-spacing: 0.6px;
+}
+
+/* Button */
+form button {
+  height: 55px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #8a2be2, #ff00ff);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px #ff00ff;
+}
+
+form button:active {
+  transform: scale(0.97);
+}
+
+.custom-dropdown {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #1e1e3f;
+  color: #fff;
+}
+
+.options {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #111;
+  border-radius: 10px;
+  margin-top: 5px;
+  display: none;
+  z-index: 10;
+}
+
+.option-item {
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option-item:hover {
+  background: #8a2be2;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency Converter</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h2>Currency Converter</h2>
+
+    <form>
+
+      <!-- Amount -->
+      <div class="amount">
+        <p>Enter Amount</p>
+        <input type="number" value="1" min="1" />
+      </div>
+
+      <!-- Dropdown Section -->
+      <div class="dropdown">
+
+        <!-- FROM -->
+        <div class="custom-dropdown from">
+          <p>From</p>
+          <input type="text" class="search-input" placeholder="Search currency..." />
+          <div class="options"></div>
+        </div>
+
+        <!-- Swap Icon -->
+        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+        <!-- TO -->
+        <div class="custom-dropdown to">
+          <p>To</p>
+          <input type="text" class="search-input" placeholder="Search currency..." />
+          <div class="options"></div>
+        </div>
+
+      </div>
+
+      <!-- Result Message -->
+      <div class="msg">
+        Loading exchange rate...
+      </div>
+
+      <!-- Button -->
+      <button type="submit">Get Exchange Rate</button>
+
+    </form>
+  </div>
+
+  <!-- IMPORTANT: Load codes.js first -->
+  <script src="codes.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
