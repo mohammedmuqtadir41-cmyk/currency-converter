@@ -224,4 +224,29 @@ form button:active {
 
 .option-item:hover {
   background: #8a2be2;
+
+}
+
+/* ============================= */
+/* Responsive Fix */
+/* ============================= */
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .custom-dropdown {
+    width: 100%;
+  }
+
+  form button {
+    width: 100%;
+  }
 }
