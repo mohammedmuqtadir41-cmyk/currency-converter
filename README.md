@@ -8,13 +8,13 @@ This project demonstrates API integration, asynchronous JavaScript, dynamic UI r
 
 ## 🚀 Live Demo
 
-👉 https://yourusername.github.io/currency-converter/
+👉 https://mohammedmuqtadir41-cmyk.github.io/currency-converter/
 
 ---
 
 ## 📸 Screenshot
 
-![Currency Converter Screenshot](screenshot.png)
+!
 
 ---
 
